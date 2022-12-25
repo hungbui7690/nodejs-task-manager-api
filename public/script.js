@@ -50,6 +50,7 @@ const showTasks = async () => {
 
 showTasks()
 
+// delete task
 tasksDOM.addEventListener('click', async (e) => {
   const trashIcon = e.target // trash icon >> <i/>
   if (trashIcon.parentElement.classList.contains('delete-btn')) {
