@@ -6,5 +6,4 @@ const connectDB = (url) => {
   return mongoose.connect(url)
 }
 
-// (1) app.js
 module.exports = connectDB

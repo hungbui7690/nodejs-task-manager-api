@@ -1,7 +1,4 @@
-// (2)
 require('dotenv').config()
-
-// (3)
 const connectDB = require('./db/connect')
 
 const express = require('express')
@@ -25,7 +22,6 @@ SERVER SETUP
 */
 const port = 5000
 
-// (4)
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URI)
@@ -35,5 +31,4 @@ const start = async () => {
   }
 }
 
-// (5)
 start()
