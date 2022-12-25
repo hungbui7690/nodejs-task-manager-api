@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
 
-// (1)
 const taskSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -14,5 +13,4 @@ const taskSchema = new mongoose.Schema({
   },
 })
 
-// (2) /controllers
 module.exports = mongoose.model('Task', taskSchema)
