@@ -5,7 +5,7 @@ const express = require('express')
 const app = express()
 const tasksRouter = require('./routes/tasks')
 
-const notFoundError = require('./middleware/not-found')
+const notFound = require('./middleware/not-found')
 const errorHandlerMiddleware = require('./middleware/error-handler')
 
 // static asset
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 })
 
 // (2) create /middleware/async.js
-app.use(notFoundError)
+app.use(notFound)
 
 // (8) create /errors/custom-error.js
 app.use(errorHandlerMiddleware)
