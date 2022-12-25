@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-// (3)
 const {
   getAllTasks,
   createTask,
@@ -10,7 +9,6 @@ const {
   getTask,
 } = require('../controllers/tasks')
 
-// (4) app.js
 router.route('/').get(getAllTasks)
 router
   .route('/:id')
