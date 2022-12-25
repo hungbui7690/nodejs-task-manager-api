@@ -31,12 +31,10 @@ const createTask = async (req, res) => {
   }
 }
 
-// (2) end >> postman >> pic: postman-update-delete
 const updateTask = async (req, res) => {
   try {
     const { id } = req.params
 
-    // update: need id + body
     const task = await Task.findOneAndUpdate({ _id: id }, req.body, {
       new: true,
       runValidators: true,
@@ -50,7 +48,6 @@ const updateTask = async (req, res) => {
   }
 }
 
-// (1)
 const deleteTask = async (req, res) => {
   try {
     const { id } = req.params
