@@ -1,10 +1,10 @@
 const express = require('express')
 const app = express()
-
-// (3)
 const tasksRouter = require('./routes/tasks')
 
-// (4) after this, postman >> check pic: postman-basic-routes
+// (5) setup postman >> pic: all-routes
+app.use(express.json())
+
 app.use('/api/v1/tasks', tasksRouter)
 
 app.get('/', (req, res) => {
